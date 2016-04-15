@@ -1,0 +1,21 @@
+
+language: objective-c
+osx_image: xcode7.3
+xcode_project: FoldingCell.xcodeproj
+# xcode_workspace: <WORKSPACE_PLACEHOLDER> 
+xcode_sdk: iphonesimulator9.3
+xcode_scheme: FoldingCell
+env:
+  global: 
+    - FRAMEWORK_NAME= FoldingCell
+before_install:
+  - brew update
+  - brew unlink carthage	
+  - brew install carthage
+before_script:
+  # bootstrap the dependencies for the project
+  # you can remove if you don't have dependencies
+ # - carthage bootstrap  
+before_deploy:
+  - carthage build --no-skip-current
+  - carthage archive $FRAMEWORK_NAME
