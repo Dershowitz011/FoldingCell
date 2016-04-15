@@ -6,7 +6,7 @@
 
 #Usage
 
-Please refer to the documentation as provided in [folding-cell](https://github.com/Ramotion/folding-cell) by [Ramtion].
+Please refer to the documentation as provided in [folding-cell](https://github.com/Ramotion/folding-cell) by Ramtion.
 
 ### Setting up with Carthage
 
